@@ -1,0 +1,25 @@
+#include <s3eTypes.h>
+
+functions:
+bool init_bluetooth() false run_on_os_thread
+void enable_bluetooth() run_on_os_thread
+void disable_bluetooth() run_on_os_thread
+bool is_bluetooth_enabled() false run_on_os_thread
+void bluetooth_close() run_on_os_thread
+
+void bluetooth_enable_discoverability() run_on_os_thread
+bool bluetooth_is_discovering() false run_on_os_thread
+void bluetooth_setup_client() run_on_os_thread
+bool is_bluetooth_connected() false run_on_os_thread
+
+void bluetooth_message_start() run_on_os_thread
+void bluetooth_message_write_float(const char* str_value) run_on_os_thread
+void bluetooth_message_write_int(int value) run_on_os_thread
+void bluetooth_message_send_current() run_on_os_thread
+
+bool is_bluetooth_message() false run_on_os_thread
+int bluetooth_message_read_int() 0 
+float bluetooth_message_read_float()  0
+void bluetooth_message_discard_current() run_on_os_thread
+void bluetooth_show_wrong_version_dialog()
+
