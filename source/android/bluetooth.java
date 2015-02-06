@@ -254,23 +254,56 @@ class bluetooth
 	
 	// -------------------------------------------------------------------------------------------
 	
-	private final BroadcastReceiver client_receiver = new BroadcastReceiver() {
+	private BroadcastReceiver client_receiver = null;
+
+	class Bluetooth_Device_Found_Revicer extends BroadcastReceiver {
+		private final ArrayList<BluetoothDevice> devices = new ArrayList<BluetoothDevice>();
+
+		private void show_dialog() {
+			final CharSequence[] items = new CharSequence[devices.size()];
+            for(int i = 0; i < devices.size();i++) {
+            	BluetoothDevice device = devices.get(i);
+            	items[i] = device.getName();
+            }
+
+			final AlertDialog.Builder builder = new AlertDialog.Builder(LoaderActivity.m_Activity);
+        	builder.setTitle("Detected bluetooth devices");
+        	builder.setItems(items, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int item) {
+                	BluetoothDevice device = devices.get(item);
+                	connect(device);
+            	}
+        	});
+
+        	
+        	LoaderActivity.m_Activity.runOnUiThread(new Runnable(){
+			public void run(){
+				AlertDialog alert = builder.create();
+        		alert.show();
+				}
+			});
+		}
+
+		private void connect(BluetoothDevice device) {
+			client_connect_thread = new Client_Connect_Thread(device);
+			client_connect_thread.start();
+			try {
+				LoaderActivity.m_Activity.unregisterReceiver(client_receiver);
+
+			} catch(Exception e) {
+				System.out.println(" " + e);
+			}
+			client_receiver = null;
+		}
+
 		public void onReceive(Context context, Intent intent) {
-			// When discovery finds a device
-			// Get the BluetoothDevice object from the Intent
-			// Add the name and address to an array adapter to show in a
-			// ListView
 			String action = intent.getAction();
 			if (BluetoothDevice.ACTION_FOUND.equals(action)) {
 				BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
-				//System.out.println("Device: " + device.getName() + " MAC: " + device.getAddress());
-				client_connect_thread = new Client_Connect_Thread(device);
-				client_connect_thread.start();
-				try {
-					LoaderActivity.m_Activity.unregisterReceiver(client_receiver);
-				} catch(Exception e) {
-					System.out.println(" " + e);
-				}
+				System.out.println("Device: " + device.getName() + " MAC: " + device.getAddress());
+				devices.add(device);
+			} else if(BluetoothAdapter.ACTION_DISCOVERY_FINISHED.equals(action)) {
+				show_dialog();	
 			}
 		}
 	};
@@ -359,7 +392,13 @@ class bluetooth
     {
         //System.out.println("=====> Setuping bluetooth client..");
 
-		IntentFilter filter = new IntentFilter(BluetoothDevice.ACTION_FOUND);
+		IntentFilter filter = new IntentFilter();
+		filter.addAction(BluetoothDevice.ACTION_FOUND);
+		filter.addAction(BluetoothAdapter.ACTION_DISCOVERY_FINISHED);
+		if(client_receiver != null) {
+			LoaderActivity.m_Activity.unregisterReceiver(client_receiver);
+		}
+		client_receiver = new Bluetooth_Device_Found_Revicer();
 		LoaderActivity.m_Activity.registerReceiver(client_receiver, filter);
 		bluetooth_adapter.startDiscovery();
 		messages.clear();
