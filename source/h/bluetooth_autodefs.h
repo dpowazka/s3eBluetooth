@@ -11,4 +11,12 @@
 #define S3E_EXT_BLUETOOTH_NAME "bluetooth"
 #define S3E_EXT_BLUETOOTH_HASH 0x57ee47bb
 
+#ifdef S3E_EXT_REGISTER
+#ifndef S3E_EXT_REGISTER_KEY
+#define S3E_EXT_REGISTER_KEY(name, num, key) S3E_EXT_REGISTER(name, num)
+#endif
+S3E_EXT_REGISTER("bluetooth", 18)
+#else
+
+#endif /* S3E_EXT_REGISTER */
 #endif /* !BLUETOOTH_AUTODEFS_H */

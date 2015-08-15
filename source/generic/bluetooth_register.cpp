@@ -115,20 +115,35 @@ static void bluetooth_message_discard_current_wrap()
 }
 
 #define init_bluetooth init_bluetooth_wrap
+
 #define enable_bluetooth enable_bluetooth_wrap
+
 #define disable_bluetooth disable_bluetooth_wrap
+
 #define is_bluetooth_enabled is_bluetooth_enabled_wrap
+
 #define bluetooth_close bluetooth_close_wrap
+
 #define bluetooth_enable_discoverability bluetooth_enable_discoverability_wrap
+
 #define bluetooth_is_discovering bluetooth_is_discovering_wrap
+
 #define bluetooth_setup_client bluetooth_setup_client_wrap
+
 #define is_bluetooth_connected is_bluetooth_connected_wrap
+
 #define bluetooth_message_start bluetooth_message_start_wrap
+
 #define bluetooth_message_write_float bluetooth_message_write_float_wrap
+
 #define bluetooth_message_write_int bluetooth_message_write_int_wrap
+
 #define bluetooth_message_send_current bluetooth_message_send_current_wrap
+
 #define is_bluetooth_message is_bluetooth_message_wrap
+
 #define bluetooth_message_discard_current bluetooth_message_discard_current_wrap
+
 
 #endif
 
@@ -163,7 +178,7 @@ void bluetoothRegisterExt()
     /*
      * Register the extension
      */
-    s3eEdkRegister("bluetooth", funcPtrs, sizeof(funcPtrs), flags, bluetoothInit, bluetoothTerminate, 0);
+s3eEdkRegister("bluetooth", funcPtrs, sizeof(funcPtrs), flags, bluetoothInit, bluetoothTerminate, 0);
 }
 
 #if !defined S3E_BUILD_S3ELOADER

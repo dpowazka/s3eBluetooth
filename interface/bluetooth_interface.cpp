@@ -11,60 +11,17 @@
 #include "bluetooth.h"
 
 
+// Define S3E_EXT_SKIP_LOADER_CALL_LOCK on the user-side to skip LoaderCallStart/LoaderCallDone()-entry.
+// e.g. in s3eNUI this is used for generic user-side IwUI-based implementation.
 #ifndef S3E_EXT_SKIP_LOADER_CALL_LOCK
-// For MIPs (and WP8) platform we do not have asm code for stack switching
-// implemented. So we make LoaderCallStart call manually to set GlobalLock
-#if defined __mips || defined S3E_ANDROID_X86 || (defined(WINAPI_FAMILY) && (WINAPI_FAMILY == WINAPI_FAMILY_PHONE_APP))
+#if defined I3D_ARCH_MIPS || defined S3E_ANDROID_X86 || (defined(WINAPI_FAMILY) && (WINAPI_FAMILY == WINAPI_FAMILY_PHONE_APP)) || defined I3D_ARCH_NACLX86_64
+// For platforms missing stack-switching (MIPS, WP8, Android-x86, NaCl, etc.) make loader-entry via LoaderCallStart/LoaderCallDone() on the user-side.
 #define LOADER_CALL_LOCK
 #endif
 #endif
 
-/**
- * Definitions for functions types passed to/from s3eExt interface
- */
-typedef       bool(*init_bluetooth_t)();
-typedef       void(*enable_bluetooth_t)();
-typedef       void(*disable_bluetooth_t)();
-typedef       bool(*is_bluetooth_enabled_t)();
-typedef       void(*bluetooth_close_t)();
-typedef       void(*bluetooth_enable_discoverability_t)();
-typedef       bool(*bluetooth_is_discovering_t)();
-typedef       void(*bluetooth_setup_client_t)();
-typedef       bool(*is_bluetooth_connected_t)();
-typedef       void(*bluetooth_message_start_t)();
-typedef       void(*bluetooth_message_write_float_t)(const char* str_value);
-typedef       void(*bluetooth_message_write_int_t)(int value);
-typedef       void(*bluetooth_message_send_current_t)();
-typedef       bool(*is_bluetooth_message_t)();
-typedef        int(*bluetooth_message_read_int_t)();
-typedef      float(*bluetooth_message_read_float_t)();
-typedef       void(*bluetooth_message_discard_current_t)();
-typedef       void(*bluetooth_show_wrong_version_dialog_t)();
 
-/**
- * struct that gets filled in by bluetoothRegister
- */
-typedef struct bluetoothFuncs
-{
-    init_bluetooth_t m_init_bluetooth;
-    enable_bluetooth_t m_enable_bluetooth;
-    disable_bluetooth_t m_disable_bluetooth;
-    is_bluetooth_enabled_t m_is_bluetooth_enabled;
-    bluetooth_close_t m_bluetooth_close;
-    bluetooth_enable_discoverability_t m_bluetooth_enable_discoverability;
-    bluetooth_is_discovering_t m_bluetooth_is_discovering;
-    bluetooth_setup_client_t m_bluetooth_setup_client;
-    is_bluetooth_connected_t m_is_bluetooth_connected;
-    bluetooth_message_start_t m_bluetooth_message_start;
-    bluetooth_message_write_float_t m_bluetooth_message_write_float;
-    bluetooth_message_write_int_t m_bluetooth_message_write_int;
-    bluetooth_message_send_current_t m_bluetooth_message_send_current;
-    is_bluetooth_message_t m_is_bluetooth_message;
-    bluetooth_message_read_int_t m_bluetooth_message_read_int;
-    bluetooth_message_read_float_t m_bluetooth_message_read_float;
-    bluetooth_message_discard_current_t m_bluetooth_message_discard_current;
-    bluetooth_show_wrong_version_dialog_t m_bluetooth_show_wrong_version_dialog;
-} bluetoothFuncs;
+#include "bluetooth_interface.h"
 
 static bluetoothFuncs g_Ext;
 static bool g_GotExt = false;
@@ -117,13 +74,13 @@ bool init_bluetooth()
         return false;
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallStart(S3E_TRUE, (void*)g_Ext.m_init_bluetooth);
 #endif
 
     bool ret = g_Ext.m_init_bluetooth();
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallDone(S3E_TRUE, (void*)g_Ext.m_init_bluetooth);
 #endif
 
     return ret;
@@ -137,13 +94,13 @@ void enable_bluetooth()
         return;
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallStart(S3E_TRUE, (void*)g_Ext.m_enable_bluetooth);
 #endif
 
     g_Ext.m_enable_bluetooth();
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallDone(S3E_TRUE, (void*)g_Ext.m_enable_bluetooth);
 #endif
 
     return;
@@ -157,13 +114,13 @@ void disable_bluetooth()
         return;
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallStart(S3E_TRUE, (void*)g_Ext.m_disable_bluetooth);
 #endif
 
     g_Ext.m_disable_bluetooth();
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallDone(S3E_TRUE, (void*)g_Ext.m_disable_bluetooth);
 #endif
 
     return;
@@ -177,13 +134,13 @@ bool is_bluetooth_enabled()
         return false;
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallStart(S3E_TRUE, (void*)g_Ext.m_is_bluetooth_enabled);
 #endif
 
     bool ret = g_Ext.m_is_bluetooth_enabled();
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallDone(S3E_TRUE, (void*)g_Ext.m_is_bluetooth_enabled);
 #endif
 
     return ret;
@@ -197,13 +154,13 @@ void bluetooth_close()
         return;
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallStart(S3E_TRUE, (void*)g_Ext.m_bluetooth_close);
 #endif
 
     g_Ext.m_bluetooth_close();
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallDone(S3E_TRUE, (void*)g_Ext.m_bluetooth_close);
 #endif
 
     return;
@@ -217,13 +174,13 @@ void bluetooth_enable_discoverability()
         return;
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallStart(S3E_TRUE, (void*)g_Ext.m_bluetooth_enable_discoverability);
 #endif
 
     g_Ext.m_bluetooth_enable_discoverability();
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallDone(S3E_TRUE, (void*)g_Ext.m_bluetooth_enable_discoverability);
 #endif
 
     return;
@@ -237,13 +194,13 @@ bool bluetooth_is_discovering()
         return false;
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallStart(S3E_TRUE, (void*)g_Ext.m_bluetooth_is_discovering);
 #endif
 
     bool ret = g_Ext.m_bluetooth_is_discovering();
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallDone(S3E_TRUE, (void*)g_Ext.m_bluetooth_is_discovering);
 #endif
 
     return ret;
@@ -257,13 +214,13 @@ void bluetooth_setup_client()
         return;
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallStart(S3E_TRUE, (void*)g_Ext.m_bluetooth_setup_client);
 #endif
 
     g_Ext.m_bluetooth_setup_client();
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallDone(S3E_TRUE, (void*)g_Ext.m_bluetooth_setup_client);
 #endif
 
     return;
@@ -277,13 +234,13 @@ bool is_bluetooth_connected()
         return false;
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallStart(S3E_TRUE, (void*)g_Ext.m_is_bluetooth_connected);
 #endif
 
     bool ret = g_Ext.m_is_bluetooth_connected();
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallDone(S3E_TRUE, (void*)g_Ext.m_is_bluetooth_connected);
 #endif
 
     return ret;
@@ -297,13 +254,13 @@ void bluetooth_message_start()
         return;
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallStart(S3E_TRUE, (void*)g_Ext.m_bluetooth_message_start);
 #endif
 
     g_Ext.m_bluetooth_message_start();
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallDone(S3E_TRUE, (void*)g_Ext.m_bluetooth_message_start);
 #endif
 
     return;
@@ -317,13 +274,13 @@ void bluetooth_message_write_float(const char* str_value)
         return;
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallStart(S3E_TRUE, (void*)g_Ext.m_bluetooth_message_write_float);
 #endif
 
     g_Ext.m_bluetooth_message_write_float(str_value);
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallDone(S3E_TRUE, (void*)g_Ext.m_bluetooth_message_write_float);
 #endif
 
     return;
@@ -337,13 +294,13 @@ void bluetooth_message_write_int(int value)
         return;
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallStart(S3E_TRUE, (void*)g_Ext.m_bluetooth_message_write_int);
 #endif
 
     g_Ext.m_bluetooth_message_write_int(value);
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallDone(S3E_TRUE, (void*)g_Ext.m_bluetooth_message_write_int);
 #endif
 
     return;
@@ -357,13 +314,13 @@ void bluetooth_message_send_current()
         return;
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallStart(S3E_TRUE, (void*)g_Ext.m_bluetooth_message_send_current);
 #endif
 
     g_Ext.m_bluetooth_message_send_current();
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallDone(S3E_TRUE, (void*)g_Ext.m_bluetooth_message_send_current);
 #endif
 
     return;
@@ -377,13 +334,13 @@ bool is_bluetooth_message()
         return false;
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallStart(S3E_TRUE, (void*)g_Ext.m_is_bluetooth_message);
 #endif
 
     bool ret = g_Ext.m_is_bluetooth_message();
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallDone(S3E_TRUE, (void*)g_Ext.m_is_bluetooth_message);
 #endif
 
     return ret;
@@ -397,13 +354,13 @@ int bluetooth_message_read_int()
         return 0;
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallStart(S3E_TRUE, (void*)g_Ext.m_bluetooth_message_read_int);
 #endif
 
     int ret = g_Ext.m_bluetooth_message_read_int();
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallDone(S3E_TRUE, (void*)g_Ext.m_bluetooth_message_read_int);
 #endif
 
     return ret;
@@ -417,13 +374,13 @@ float bluetooth_message_read_float()
         return 0;
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallStart(S3E_TRUE, (void*)g_Ext.m_bluetooth_message_read_float);
 #endif
 
     float ret = g_Ext.m_bluetooth_message_read_float();
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallDone(S3E_TRUE, (void*)g_Ext.m_bluetooth_message_read_float);
 #endif
 
     return ret;
@@ -437,13 +394,13 @@ void bluetooth_message_discard_current()
         return;
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallStart(S3E_TRUE, (void*)g_Ext.m_bluetooth_message_discard_current);
 #endif
 
     g_Ext.m_bluetooth_message_discard_current();
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallDone(S3E_TRUE, (void*)g_Ext.m_bluetooth_message_discard_current);
 #endif
 
     return;
@@ -457,13 +414,13 @@ void bluetooth_show_wrong_version_dialog()
         return;
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallStart(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallStart(S3E_TRUE, (void*)g_Ext.m_bluetooth_show_wrong_version_dialog);
 #endif
 
     g_Ext.m_bluetooth_show_wrong_version_dialog();
 
 #ifdef LOADER_CALL_LOCK
-    s3eDeviceLoaderCallDone(S3E_TRUE, NULL);
+    s3eDeviceLoaderCallDone(S3E_TRUE, (void*)g_Ext.m_bluetooth_show_wrong_version_dialog);
 #endif
 
     return;

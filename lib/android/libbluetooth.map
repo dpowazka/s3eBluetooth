@@ -1,32 +1,19 @@
 Archive member included because of file (symbol)
 
-C:\Marmalade\7.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+C:\Marmalade\7.8\s3e\edk\lib\android/libedk.a(edk_helpers.o)
                               release\bluetooth_platform.os (s3eEdkThreadRunOnOS)
-c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(unwind-arm.o)
-                              C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o (__aeabi_unwind_cpp_pr0)
-c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(libunwind.o)
-                              c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(unwind-arm.o) (restore_core_regs)
-c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(pr-support.o)
-                              c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(unwind-arm.o) (__gnu_unwind_execute)
 
 Discarded input sections
 
- .ARM.extab     0x00000000        0x0 C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
- .bss           0x00000000        0x0 C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
+ .text          0x00000000       0x34 C:/android/ndk-r10d/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
+ .bss           0x00000000        0x0 C:/android/ndk-r10d/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
  .note.GNU-stack
-                0x00000000        0x0 C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
- _ZN7_JNIEnv11GetMethodIDEP7_jclassPKcS3_
-                0x00000000        0x0 release\bluetooth_platform.os
- _ZN7_JNIEnv14CallVoidMethodEP8_jobjectP10_jmethodIDz
-                0x00000000        0x0 release\bluetooth_platform.os
- _ZN7_JNIEnv15CallFloatMethodEP8_jobjectP10_jmethodIDz
-                0x00000000        0x0 release\bluetooth_platform.os
- _ZN7_JNIEnv13CallIntMethodEP8_jobjectP10_jmethodIDz
-                0x00000000        0x0 release\bluetooth_platform.os
- _ZN7_JNIEnv17CallBooleanMethodEP8_jobjectP10_jmethodIDz
-                0x00000000        0x0 release\bluetooth_platform.os
- _ZN7_JNIEnv9NewObjectEP7_jclassP10_jmethodIDz
-                0x00000000        0x0 release\bluetooth_platform.os
+                0x00000000        0x0 C:/android/ndk-r10d/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
+ .group         0x00000000        0x8 release\bluetooth_platform.os
+ .group         0x00000000        0x8 release\bluetooth_platform.os
+ .group         0x00000000        0x8 release\bluetooth_platform.os
+ .group         0x00000000        0x8 release\bluetooth_platform.os
+ .group         0x00000000        0x8 release\bluetooth_platform.os
  .text          0x00000000        0x0 release\bluetooth_platform.os
  .data          0x00000000        0x0 release\bluetooth_platform.os
  .note.GNU-stack
@@ -40,651 +27,253 @@ Discarded input sections
  .data          0x00000000        0x0 release\bluetooth_register.os
  .bss           0x00000000        0x0 release\bluetooth_register.os
  .text._Z20bluetoothRegisterExtv
-                0x00000000        0x0 release\bluetooth_register.os
+                0x00000000      0x194 release\bluetooth_register.os
  .note.GNU-stack
                 0x00000000        0x0 release\bluetooth_register.os
- .text          0x00000000        0x0 C:\Marmalade\7.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
- .data          0x00000000        0x0 C:\Marmalade\7.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
- .bss           0x00000000        0x0 C:\Marmalade\7.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
- .text.s3eEdkThreadRunOnOSAsync
-                0x00000000        0x0 C:\Marmalade\7.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+ .text          0x00000000        0x0 C:\Marmalade\7.8\s3e\edk\lib\android/libedk.a(edk_helpers.o)
+ .data          0x00000000        0x0 C:\Marmalade\7.8\s3e\edk\lib\android/libedk.a(edk_helpers.o)
+ .bss           0x00000000        0x0 C:\Marmalade\7.8\s3e\edk\lib\android/libedk.a(edk_helpers.o)
  .text.s3eEdkErrorSetString
-                0x00000000        0x0 C:\Marmalade\7.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
+                0x00000000       0x30 C:\Marmalade\7.8\s3e\edk\lib\android/libedk.a(edk_helpers.o)
+ .text.s3eEdkThreadRunOnOSAsync
+                0x00000000       0x30 C:\Marmalade\7.8\s3e\edk\lib\android/libedk.a(edk_helpers.o)
  .note.GNU-stack
-                0x00000000        0x0 C:\Marmalade\7.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
- .data          0x00000000        0x0 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(unwind-arm.o)
- .bss           0x00000000        0x0 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(unwind-arm.o)
+                0x00000000        0x0 C:\Marmalade\7.8\s3e\edk\lib\android/libedk.a(edk_helpers.o)
+ .text          0x00000000        0x0 C:/android/ndk-r10d/platforms/android-14/arch-arm/usr/lib/crtend_so.o
+ .data          0x00000000        0x0 C:/android/ndk-r10d/platforms/android-14/arch-arm/usr/lib/crtend_so.o
+ .bss           0x00000000        0x0 C:/android/ndk-r10d/platforms/android-14/arch-arm/usr/lib/crtend_so.o
  .note.GNU-stack
-                0x00000000        0x0 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(unwind-arm.o)
- .data          0x00000000        0x0 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(libunwind.o)
- .bss           0x00000000        0x0 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(libunwind.o)
- .note.GNU-stack
-                0x00000000        0x0 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(libunwind.o)
- .data          0x00000000        0x0 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(pr-support.o)
- .bss           0x00000000        0x0 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(pr-support.o)
- .ARM.extab     0x00000000        0x0 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(pr-support.o)
- .note.GNU-stack
-                0x00000000        0x0 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(pr-support.o)
- .text          0x00000000        0x0 C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtend_so.o
- .data          0x00000000        0x0 C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtend_so.o
- .bss           0x00000000        0x0 C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtend_so.o
- .note.GNU-stack
-                0x00000000        0x0 C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtend_so.o
+                0x00000000        0x0 C:/android/ndk-r10d/platforms/android-14/arch-arm/usr/lib/crtend_so.o
 
-Memory Configuration
+Memory map
 
-Name             Origin             Length             Attributes
-*default*        0x00000000         0xffffffff
+ ** file header
+                0x00000000       0x34
+ ** segment headers
+                0x00000034       0xe0
 
-Linker script and memory map
+.interp         0x00000114       0x13
+ ** fill        0x00000114       0x13
 
-LOAD C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
-LOAD release\bluetooth_platform.os
-LOAD release\bluetooth.os
-LOAD release\bluetooth_register.os
-LOAD C:\Marmalade\7.2\s3e\edk\lib\android\libedk.a
-LOAD C:\Marmalade\7.2\s3e\edk\lib\android/libplaceholderplaceholderplaceholderplaceholderplaceholder.so
-LOAD C:\android\android-ndk\platforms\android-9\arch-arm\usr\lib/liblog.so
-LOAD C:\android\android-ndk\sources\cxx-stl\gnu-libstdc++\4.4.3\libs\armeabi\libgnustl_static.a
-LOAD c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a
-LOAD C:\android\android-ndk\platforms\android-9\arch-arm\usr\lib/libstdc++.so
-LOAD C:\android\android-ndk\platforms\android-9\arch-arm\usr\lib/libm.so
-LOAD C:\android\android-ndk\platforms\android-9\arch-arm\usr\lib/libc.so
-LOAD c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a
-LOAD C:\android\android-ndk\platforms\android-9\arch-arm\usr\lib/libc.so
-LOAD C:\android\android-ndk\platforms\android-9\arch-arm\usr\lib/libdl.so
-LOAD c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a
-LOAD C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtend_so.o
-                0x000000f4                . = (0x0 + SIZEOF_HEADERS)
+.dynsym         0x00000128       0xd0
+ ** dynsym      0x00000128       0xd0
 
-.note.gnu.build-id
- *(.note.gnu.build-id)
+.dynstr         0x000001f8       0xf1
+ ** string table
+                0x000001f8       0xf1
 
-.hash           0x000000f4      0x234
- *(.hash)
- .hash          0x000000f4      0x234 C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
+.hash           0x000002ec       0x48
+ ** hash        0x000002ec       0x48
 
-.gnu.hash
- *(.gnu.hash)
+.rel.dyn        0x00000334       0xa8
+ ** dynamic relocs
+                0x00000334       0xa8
 
-.dynsym         0x00000328      0x480
- *(.dynsym)
- .dynsym        0x00000328      0x480 C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
+.rel.plt        0x000003dc       0x28
+ ** dynamic relocs
+                0x000003dc       0x28
 
-.dynstr         0x000007a8      0x4ff
- *(.dynstr)
- .dynstr        0x000007a8      0x4ff C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
+.plt            0x00000404       0x50
+ ** PLT         0x00000404       0x50
 
-.gnu.version    0x00000ca8        0x0 load address 0x00000ca7
- *(.gnu.version)
- .gnu.version   0x00000000        0x0 C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
-
-.gnu.version_d  0x00000ca8        0x0 load address 0x00000ca7
- *(.gnu.version_d)
- .gnu.version_d
-                0x00000000        0x0 C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
-
-.gnu.version_r  0x00000ca8        0x0 load address 0x00000ca7
- *(.gnu.version_r)
- .gnu.version_r
-                0x00000000        0x0 C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
-
-.rel.dyn        0x00000ca8       0xf8
- *(.rel.init)
- *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
- .rel.text      0x00000ca8       0x10 C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
- *(.rel.fini)
- *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
- *(.rel.data.rel.ro* .rel.gnu.linkonce.d.rel.ro.*)
- *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
- .rel.data      0x00000cb8        0x8 C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
- *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
- *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
- *(.rel.ctors)
- *(.rel.dtors)
- *(.rel.got)
- .rel.got       0x00000cc0       0xd8 C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
- *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
- .rel.fini_array
-                0x00000d98        0x8 C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
-
-.rela.dyn
- *(.rela.init)
- *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
- *(.rela.fini)
- *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
- *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
- *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
- *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
- *(.rela.ctors)
- *(.rela.dtors)
- *(.rela.got)
- *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
-
-.rel.plt        0x00000da0       0x58
- *(.rel.plt)
- .rel.plt       0x00000da0       0x58 C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
-
-.rela.plt
- *(.rela.plt)
-
-.init
- *(.init)
-
-.plt            0x00000df8       0x98
- *(.plt)
- .plt           0x00000df8       0x98 C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
-
-.text           0x00000e90     0x256c
- *(.text .stub .text.* .gnu.linkonce.t.*)
- .text          0x00000e90       0x28 C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
-                0x00000ea0                atexit
- .text._ZN7_JNIEnv11GetMethodIDEP7_jclassPKcS3_
-                0x00000eb8       0x14 release\bluetooth_platform.os
-                0x00000eb8                _JNIEnv::GetMethodID(_jclass*, char const*, char const*)
- .text._Z27bluetoothTerminate_platformv
-                0x00000ecc        0x4 release\bluetooth_platform.os
-                0x00000ecc                bluetoothTerminate_platform()
- .text._ZN7_JNIEnv14CallVoidMethodEP8_jobjectP10_jmethodIDz
-                0x00000ed0       0x34 release\bluetooth_platform.os
-                0x00000ed0                _JNIEnv::CallVoidMethod(_jobject*, _jmethodID*, ...)
- .text._ZN7_JNIEnv15CallFloatMethodEP8_jobjectP10_jmethodIDz
-                0x00000f04       0x34 release\bluetooth_platform.os
-                0x00000f04                _JNIEnv::CallFloatMethod(_jobject*, _jmethodID*, ...)
- .text._ZN7_JNIEnv13CallIntMethodEP8_jobjectP10_jmethodIDz
-                0x00000f38       0x34 release\bluetooth_platform.os
-                0x00000f38                _JNIEnv::CallIntMethod(_jobject*, _jmethodID*, ...)
- .text._ZN7_JNIEnv17CallBooleanMethodEP8_jobjectP10_jmethodIDz
-                0x00000f6c       0x34 release\bluetooth_platform.os
-                0x00000f6c                _JNIEnv::CallBooleanMethod(_jobject*, _jmethodID*, ...)
- .text._ZN7_JNIEnv9NewObjectEP7_jclassP10_jmethodIDz
-                0x00000fa0       0x34 release\bluetooth_platform.os
-                0x00000fa0                _JNIEnv::NewObject(_jclass*, _jmethodID*, ...)
- .text._Z44bluetooth_show_wrong_version_dialog_platformv
-                0x00000fd4       0x4c release\bluetooth_platform.os
-                0x00000fd4                bluetooth_show_wrong_version_dialog_platform()
- .text._Z42bluetooth_message_discard_current_platformv
-                0x00001020       0x50 release\bluetooth_platform.os
-                0x00001020                bluetooth_message_discard_current_platform()
- .text._Z39bluetooth_message_send_current_platformv
-                0x00001070       0x50 release\bluetooth_platform.os
-                0x00001070                bluetooth_message_send_current_platform()
- .text._Z36bluetooth_message_write_int_platformi
-                0x000010c0       0x58 release\bluetooth_platform.os
-                0x000010c0                bluetooth_message_write_int_platform(int)
- .text._Z32bluetooth_message_start_platformv
-                0x00001118       0x50 release\bluetooth_platform.os
-                0x00001118                bluetooth_message_start_platform()
- .text._Z31bluetooth_setup_client_platformv
-                0x00001168       0x50 release\bluetooth_platform.os
-                0x00001168                bluetooth_setup_client_platform()
- .text._Z41bluetooth_enable_discoverability_platformv
-                0x000011b8       0x50 release\bluetooth_platform.os
-                0x000011b8                bluetooth_enable_discoverability_platform()
- .text._Z24bluetooth_close_platformv
-                0x00001208       0x50 release\bluetooth_platform.os
-                0x00001208                bluetooth_close_platform()
- .text._Z26disable_bluetooth_platformv
-                0x00001258       0x50 release\bluetooth_platform.os
-                0x00001258                disable_bluetooth_platform()
- .text._Z25enable_bluetooth_platformv
-                0x000012a8       0x50 release\bluetooth_platform.os
-                0x000012a8                enable_bluetooth_platform()
- .text._Z35bluetooth_message_read_int_platformv
-                0x000012f8       0x50 release\bluetooth_platform.os
-                0x000012f8                bluetooth_message_read_int_platform()
- .text._Z37bluetooth_message_read_float_platformv
-                0x00001348       0x50 release\bluetooth_platform.os
-                0x00001348                bluetooth_message_read_float_platform()
- .text._Z29is_bluetooth_message_platformv
-                0x00001398       0x58 release\bluetooth_platform.os
-                0x00001398                is_bluetooth_message_platform()
- .text._Z31is_bluetooth_connected_platformv
-                0x000013f0       0x58 release\bluetooth_platform.os
-                0x000013f0                is_bluetooth_connected_platform()
- .text._Z33bluetooth_is_discovering_platformv
-                0x00001448       0x58 release\bluetooth_platform.os
-                0x00001448                bluetooth_is_discovering_platform()
- .text._Z29is_bluetooth_enabled_platformv
-                0x000014a0       0x58 release\bluetooth_platform.os
-                0x000014a0                is_bluetooth_enabled_platform()
- .text._Z23init_bluetooth_platformv
-                0x000014f8       0x58 release\bluetooth_platform.os
-                0x000014f8                init_bluetooth_platform()
- .text._Z38bluetooth_message_write_float_platformPKc
-                0x00001550       0x70 release\bluetooth_platform.os
-                0x00001550                bluetooth_message_write_float_platform(char const*)
+.text           0x00000454     0x1070
+ .text.exit     0x00000454       0x10 C:/android/ndk-r10d/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
+                0x00000454                __on_dlclose
  .text._ZL27s3eEdkAndroidFindClass_realPKc
-                0x000015c0       0xb8 release\bluetooth_platform.os
+                0x00000464       0xb8 release\bluetooth_platform.os
+ .text._ZN7_JNIEnv9NewObjectEP7_jclassP10_jmethodIDz
+                0x0000051c       0x38 release\bluetooth_platform.os
+                0x0000051c                _JNIEnv::NewObject(_jclass*, _jmethodID*, ...)
+ .text._ZN7_JNIEnv17CallBooleanMethodEP8_jobjectP10_jmethodIDz
+                0x00000554       0x38 release\bluetooth_platform.os
+                0x00000554                _JNIEnv::CallBooleanMethod(_jobject*, _jmethodID*, ...)
+ .text._ZN7_JNIEnv13CallIntMethodEP8_jobjectP10_jmethodIDz
+                0x0000058c       0x38 release\bluetooth_platform.os
+                0x0000058c                _JNIEnv::CallIntMethod(_jobject*, _jmethodID*, ...)
+ .text._ZN7_JNIEnv15CallFloatMethodEP8_jobjectP10_jmethodIDz
+                0x000005c4       0x38 release\bluetooth_platform.os
+                0x000005c4                _JNIEnv::CallFloatMethod(_jobject*, _jmethodID*, ...)
+ .text._ZN7_JNIEnv14CallVoidMethodEP8_jobjectP10_jmethodIDz
+                0x000005fc       0x38 release\bluetooth_platform.os
+                0x000005fc                _JNIEnv::CallVoidMethod(_jobject*, _jmethodID*, ...)
  .text._Z22bluetoothInit_platformv
-                0x00001678      0x490 release\bluetooth_platform.os
-                0x00001678                bluetoothInit_platform()
- .text.bluetooth_show_wrong_version_dialog
-                0x00001b08        0x4 release\bluetooth.os
-                0x00001b08                bluetooth_show_wrong_version_dialog
- .text.bluetooth_message_discard_current
-                0x00001b0c        0x4 release\bluetooth.os
-                0x00001b0c                bluetooth_message_discard_current
- .text.bluetooth_message_read_float
-                0x00001b10        0x4 release\bluetooth.os
-                0x00001b10                bluetooth_message_read_float
- .text.bluetooth_message_read_int
-                0x00001b14        0x4 release\bluetooth.os
-                0x00001b14                bluetooth_message_read_int
- .text.is_bluetooth_message
-                0x00001b18        0x4 release\bluetooth.os
-                0x00001b18                is_bluetooth_message
- .text.bluetooth_message_send_current
-                0x00001b1c        0x4 release\bluetooth.os
-                0x00001b1c                bluetooth_message_send_current
- .text.bluetooth_message_write_int
-                0x00001b20        0x4 release\bluetooth.os
-                0x00001b20                bluetooth_message_write_int
- .text.bluetooth_message_write_float
-                0x00001b24        0x4 release\bluetooth.os
-                0x00001b24                bluetooth_message_write_float
- .text.bluetooth_message_start
-                0x00001b28        0x4 release\bluetooth.os
-                0x00001b28                bluetooth_message_start
- .text.is_bluetooth_connected
-                0x00001b2c        0x4 release\bluetooth.os
-                0x00001b2c                is_bluetooth_connected
- .text.bluetooth_setup_client
-                0x00001b30        0x4 release\bluetooth.os
-                0x00001b30                bluetooth_setup_client
- .text.bluetooth_is_discovering
-                0x00001b34        0x4 release\bluetooth.os
-                0x00001b34                bluetooth_is_discovering
- .text.bluetooth_enable_discoverability
-                0x00001b38        0x4 release\bluetooth.os
-                0x00001b38                bluetooth_enable_discoverability
- .text.bluetooth_close
-                0x00001b3c        0x4 release\bluetooth.os
-                0x00001b3c                bluetooth_close
- .text.is_bluetooth_enabled
-                0x00001b40        0x4 release\bluetooth.os
-                0x00001b40                is_bluetooth_enabled
- .text.disable_bluetooth
-                0x00001b44        0x4 release\bluetooth.os
-                0x00001b44                disable_bluetooth
- .text.enable_bluetooth
-                0x00001b48        0x4 release\bluetooth.os
-                0x00001b48                enable_bluetooth
- .text.init_bluetooth
-                0x00001b4c        0x4 release\bluetooth.os
-                0x00001b4c                init_bluetooth
- .text._Z18bluetoothTerminatev
-                0x00001b50        0x4 release\bluetooth.os
-                0x00001b50                bluetoothTerminate()
+                0x00000634      0x504 release\bluetooth_platform.os
+                0x00000634                bluetoothInit_platform()
+ .text._Z27bluetoothTerminate_platformv
+                0x00000b38        0x4 release\bluetooth_platform.os
+                0x00000b38                bluetoothTerminate_platform()
+ .text._Z23init_bluetooth_platformv
+                0x00000b3c       0x58 release\bluetooth_platform.os
+                0x00000b3c                init_bluetooth_platform()
+ .text._Z25enable_bluetooth_platformv
+                0x00000b94       0x50 release\bluetooth_platform.os
+                0x00000b94                enable_bluetooth_platform()
+ .text._Z26disable_bluetooth_platformv
+                0x00000be4       0x50 release\bluetooth_platform.os
+                0x00000be4                disable_bluetooth_platform()
+ .text._Z29is_bluetooth_enabled_platformv
+                0x00000c34       0x58 release\bluetooth_platform.os
+                0x00000c34                is_bluetooth_enabled_platform()
+ .text._Z24bluetooth_close_platformv
+                0x00000c8c       0x50 release\bluetooth_platform.os
+                0x00000c8c                bluetooth_close_platform()
+ .text._Z41bluetooth_enable_discoverability_platformv
+                0x00000cdc       0x50 release\bluetooth_platform.os
+                0x00000cdc                bluetooth_enable_discoverability_platform()
+ .text._Z33bluetooth_is_discovering_platformv
+                0x00000d2c       0x58 release\bluetooth_platform.os
+                0x00000d2c                bluetooth_is_discovering_platform()
+ .text._Z31bluetooth_setup_client_platformv
+                0x00000d84       0x50 release\bluetooth_platform.os
+                0x00000d84                bluetooth_setup_client_platform()
+ .text._Z31is_bluetooth_connected_platformv
+                0x00000dd4       0x58 release\bluetooth_platform.os
+                0x00000dd4                is_bluetooth_connected_platform()
+ .text._Z32bluetooth_message_start_platformv
+                0x00000e2c       0x50 release\bluetooth_platform.os
+                0x00000e2c                bluetooth_message_start_platform()
+ .text._Z38bluetooth_message_write_float_platformPKc
+                0x00000e7c       0x70 release\bluetooth_platform.os
+                0x00000e7c                bluetooth_message_write_float_platform(char const*)
+ .text._Z36bluetooth_message_write_int_platformi
+                0x00000eec       0x58 release\bluetooth_platform.os
+                0x00000eec                bluetooth_message_write_int_platform(int)
+ .text._Z39bluetooth_message_send_current_platformv
+                0x00000f44       0x50 release\bluetooth_platform.os
+                0x00000f44                bluetooth_message_send_current_platform()
+ .text._Z29is_bluetooth_message_platformv
+                0x00000f94       0x58 release\bluetooth_platform.os
+                0x00000f94                is_bluetooth_message_platform()
+ .text._Z35bluetooth_message_read_int_platformv
+                0x00000fec       0x50 release\bluetooth_platform.os
+                0x00000fec                bluetooth_message_read_int_platform()
+ .text._Z37bluetooth_message_read_float_platformv
+                0x0000103c       0x50 release\bluetooth_platform.os
+                0x0000103c                bluetooth_message_read_float_platform()
+ .text._Z42bluetooth_message_discard_current_platformv
+                0x0000108c       0x50 release\bluetooth_platform.os
+                0x0000108c                bluetooth_message_discard_current_platform()
+ .text._Z44bluetooth_show_wrong_version_dialog_platformv
+                0x000010dc       0x50 release\bluetooth_platform.os
+                0x000010dc                bluetooth_show_wrong_version_dialog_platform()
  .text._Z13bluetoothInitv
-                0x00001b54        0x4 release\bluetooth.os
-                0x00001b54                bluetoothInit()
+                0x0000112c        0x4 release\bluetooth.os
+                0x0000112c                bluetoothInit()
+ .text._Z18bluetoothTerminatev
+                0x00001130        0x4 release\bluetooth.os
+                0x00001130                bluetoothTerminate()
+ .text.init_bluetooth
+                0x00001134        0x4 release\bluetooth.os
+                0x00001134                init_bluetooth
+ .text.enable_bluetooth
+                0x00001138        0x4 release\bluetooth.os
+                0x00001138                enable_bluetooth
+ .text.disable_bluetooth
+                0x0000113c        0x4 release\bluetooth.os
+                0x0000113c                disable_bluetooth
+ .text.is_bluetooth_enabled
+                0x00001140        0x4 release\bluetooth.os
+                0x00001140                is_bluetooth_enabled
+ .text.bluetooth_close
+                0x00001144        0x4 release\bluetooth.os
+                0x00001144                bluetooth_close
+ .text.bluetooth_enable_discoverability
+                0x00001148        0x4 release\bluetooth.os
+                0x00001148                bluetooth_enable_discoverability
+ .text.bluetooth_is_discovering
+                0x0000114c        0x4 release\bluetooth.os
+                0x0000114c                bluetooth_is_discovering
+ .text.bluetooth_setup_client
+                0x00001150        0x4 release\bluetooth.os
+                0x00001150                bluetooth_setup_client
+ .text.is_bluetooth_connected
+                0x00001154        0x4 release\bluetooth.os
+                0x00001154                is_bluetooth_connected
+ .text.bluetooth_message_start
+                0x00001158        0x4 release\bluetooth.os
+                0x00001158                bluetooth_message_start
+ .text.bluetooth_message_write_float
+                0x0000115c        0x4 release\bluetooth.os
+                0x0000115c                bluetooth_message_write_float
+ .text.bluetooth_message_write_int
+                0x00001160        0x4 release\bluetooth.os
+                0x00001160                bluetooth_message_write_int
+ .text.bluetooth_message_send_current
+                0x00001164        0x4 release\bluetooth.os
+                0x00001164                bluetooth_message_send_current
+ .text.is_bluetooth_message
+                0x00001168        0x4 release\bluetooth.os
+                0x00001168                is_bluetooth_message
+ .text.bluetooth_message_read_int
+                0x0000116c        0x4 release\bluetooth.os
+                0x0000116c                bluetooth_message_read_int
+ .text.bluetooth_message_read_float
+                0x00001170        0x4 release\bluetooth.os
+                0x00001170                bluetooth_message_read_float
+ .text.bluetooth_message_discard_current
+                0x00001174        0x4 release\bluetooth.os
+                0x00001174                bluetooth_message_discard_current
+ .text.bluetooth_show_wrong_version_dialog
+                0x00001178        0x4 release\bluetooth.os
+                0x00001178                bluetooth_show_wrong_version_dialog
  .text._ZL38bluetooth_message_discard_current_wrapv
-                0x00001b58       0x14 release\bluetooth_register.os
+                0x0000117c       0x14 release\bluetooth_register.os
  .text._ZL25is_bluetooth_message_wrapv
-                0x00001b6c       0x24 release\bluetooth_register.os
+                0x00001190       0x24 release\bluetooth_register.os
  .text._ZL35bluetooth_message_send_current_wrapv
-                0x00001b90       0x14 release\bluetooth_register.os
+                0x000011b4       0x14 release\bluetooth_register.os
  .text._ZL32bluetooth_message_write_int_wrapi
-                0x00001ba4       0x18 release\bluetooth_register.os
+                0x000011c8       0x18 release\bluetooth_register.os
  .text._ZL34bluetooth_message_write_float_wrapPKc
-                0x00001bbc       0x18 release\bluetooth_register.os
+                0x000011e0       0x18 release\bluetooth_register.os
  .text._ZL28bluetooth_message_start_wrapv
-                0x00001bd4       0x14 release\bluetooth_register.os
+                0x000011f8       0x14 release\bluetooth_register.os
  .text._ZL27is_bluetooth_connected_wrapv
-                0x00001be8       0x24 release\bluetooth_register.os
+                0x0000120c       0x24 release\bluetooth_register.os
  .text._ZL27bluetooth_setup_client_wrapv
-                0x00001c0c       0x14 release\bluetooth_register.os
+                0x00001230       0x14 release\bluetooth_register.os
  .text._ZL29bluetooth_is_discovering_wrapv
-                0x00001c20       0x24 release\bluetooth_register.os
+                0x00001244       0x24 release\bluetooth_register.os
  .text._ZL37bluetooth_enable_discoverability_wrapv
-                0x00001c44       0x14 release\bluetooth_register.os
+                0x00001268       0x14 release\bluetooth_register.os
  .text._ZL20bluetooth_close_wrapv
-                0x00001c58       0x14 release\bluetooth_register.os
+                0x0000127c       0x14 release\bluetooth_register.os
  .text._ZL25is_bluetooth_enabled_wrapv
-                0x00001c6c       0x24 release\bluetooth_register.os
+                0x00001290       0x24 release\bluetooth_register.os
  .text._ZL22disable_bluetooth_wrapv
-                0x00001c90       0x14 release\bluetooth_register.os
+                0x000012b4       0x14 release\bluetooth_register.os
  .text._ZL21enable_bluetooth_wrapv
-                0x00001ca4       0x14 release\bluetooth_register.os
+                0x000012c8       0x14 release\bluetooth_register.os
  .text._ZL19init_bluetooth_wrapv
-                0x00001cb8       0x24 release\bluetooth_register.os
+                0x000012dc       0x24 release\bluetooth_register.os
  .text.RegisterExt
-                0x00001cdc      0x200 release\bluetooth_register.os
-                0x00001cdc                RegisterExt
+                0x00001300      0x194 release\bluetooth_register.os
+                0x00001300                RegisterExt
  .text.s3eEdkThreadRunOnOS
-                0x00001edc       0x30 C:\Marmalade\7.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
-                0x00001edc                s3eEdkThreadRunOnOS
- .text          0x00001f0c      0xec4 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(unwind-arm.o)
-                0x00002934                __gnu_Unwind_RaiseException
-                0x0000248c                __aeabi_unwind_cpp_pr0
-                0x00001fbc                _Unwind_GetCFA
-                0x00001f58                _Unwind_VRS_Set
-                0x000026d0                __gnu_Unwind_Backtrace
-                0x00002a64                _Unwind_VRS_Pop
-                0x0000247c                __aeabi_unwind_cpp_pr2
-                0x00001fc8                _Unwind_DeleteException
-                0x00001fc4                _Unwind_Complete
-                0x000029f8                __gnu_Unwind_Resume
-                0x000028c0                __gnu_Unwind_ForcedUnwind
-                0x000029d8                __gnu_Unwind_Resume_or_Rethrow
-                0x00001f0c                _Unwind_VRS_Get
-                0x00002484                __aeabi_unwind_cpp_pr1
- .text          0x00002dd0      0x1a8 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(libunwind.o)
-                0x00002f30                ___Unwind_ForcedUnwind
-                0x00002dec                __gnu_Unwind_Save_VFP
-                0x00002f0c                _Unwind_Resume_or_Rethrow
-                0x00002f0c                ___Unwind_Resume_or_Rethrow
-                0x00002f54                _Unwind_Backtrace
-                0x00002dd0                __restore_core_regs
-                0x00002e0c                __gnu_Unwind_Save_VFP_D_16_to_31
-                0x00002dfc                __gnu_Unwind_Save_VFP_D
-                0x00002f54                ___Unwind_Backtrace
-                0x00002ec4                ___Unwind_RaiseException
-                0x00002ee8                ___Unwind_Resume
-                0x00002e14                __gnu_Unwind_Restore_WMMXD
-                0x00002de4                __gnu_Unwind_Restore_VFP
-                0x00002ee8                _Unwind_Resume
-                0x00002df4                __gnu_Unwind_Restore_VFP_D
-                0x00002e04                __gnu_Unwind_Restore_VFP_D_16_to_31
-                0x00002ec4                _Unwind_RaiseException
-                0x00002dd0                restore_core_regs
-                0x00002eb0                __gnu_Unwind_Save_WMMXC
-                0x00002e9c                __gnu_Unwind_Restore_WMMXC
-                0x00002f30                _Unwind_ForcedUnwind
-                0x00002e58                __gnu_Unwind_Save_WMMXD
- .text          0x00002f78      0x484 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(pr-support.o)
-                0x00003018                _Unwind_GetRegionStart
-                0x00003044                __gnu_unwind_execute
-                0x00002fd0                _Unwind_GetTextRelBase
-                0x00002fe0                _Unwind_GetLanguageSpecificData
-                0x000033bc                __gnu_unwind_frame
-                0x00002fd8                _Unwind_GetDataRelBase
- *(.gnu.warning)
- *(.glue_7t)
- .glue_7t       0x00000000        0x0 linker stubs
- *(.glue_7)
- .glue_7        0x00000000        0x0 linker stubs
- *(.vfp11_veneer)
- .vfp11_veneer  0x00000000        0x0 linker stubs
- *(.v4_bx)
- .v4_bx         0x00000000        0x0 linker stubs
+                0xffffffffffffffff       0x30 C:\Marmalade\7.8\s3e\edk\lib\android/libedk.a(edk_helpers.o)
+                0x00001494                s3eEdkThreadRunOnOS
 
-.fini
- *(.fini)
-                0x000033fc                PROVIDE (__etext, .)
-                0x000033fc                PROVIDE (_etext, .)
-                0x000033fc                PROVIDE (etext, .)
+.rodata         0x000014c4      0x224
+ ** merge strings
+                0x000014c4      0x224
 
-.rodata         0x000033fc      0x218
- *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata.str1.4
-                0x000033fc      0x218 release\bluetooth_platform.os
-                                0x224 (size before relaxing)
- .rodata.str1.4
-                0x00000000        0xc release\bluetooth_register.os
+.fini_array     0x00002ea4        0x8
+ .fini_array    0x00002ea4        0x4 C:/android/ndk-r10d/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
+ .fini_array    0x00002ea8        0x4 C:/android/ndk-r10d/platforms/android-14/arch-arm/usr/lib/crtend_so.o
 
-.rodata1
- *(.rodata1)
+.init_array     0x00002eac        0x4
+ .init_array    0x00002eac        0x4 C:/android/ndk-r10d/platforms/android-14/arch-arm/usr/lib/crtend_so.o
 
-.ARM.extab      0x00003614       0x24
- *(.ARM.extab* .gnu.linkonce.armextab.*)
- .ARM.extab     0x00003614       0x24 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(unwind-arm.o)
-                0x00003638                __exidx_start = .
+.dynamic        0x00002eb0       0xe0
+ ** dynamic     0x00002eb0       0xe0
 
-.ARM.exidx      0x00003638       0xe0
- *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x00003638        0x8 C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
- .ARM.exidx     0x00003640       0xa0 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(unwind-arm.o)
- .ARM.exidx     0x000036e0       0x38 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(pr-support.o)
-                0x00003718                __exidx_end = .
+.got            0x00002f90       0x70
+ ** GOT         0x00002f90       0x50
+ ** GOT PLT     0x00002fe0       0x20
 
-.eh_frame_hdr
- *(.eh_frame_hdr)
+.data           0x00003000        0x4
+ .data          0x00003000        0x4 C:/android/ndk-r10d/platforms/android-14/arch-arm/usr/lib/crtbegin_so.o
+                0x00003000                __dso_handle
 
-.eh_frame
- *(.eh_frame)
-
-.gcc_except_table
- *(.gcc_except_table .gcc_except_table.*)
-                0x00003718                . = (ALIGN (0x1000) - ((0x1000 - .) & 0xfff))
-                0x00004e68                . = (0x1000 DATA_SEGMENT_ALIGN 0x1000)
-
-.eh_frame
- *(.eh_frame)
-
-.gcc_except_table
- *(.gcc_except_table .gcc_except_table.*)
-
-.tdata
- *(.tdata .tdata.* .gnu.linkonce.td.*)
-
-.tbss
- *(.tbss .tbss.* .gnu.linkonce.tb.*)
- *(.tcommon)
-
-.preinit_array
- *(.preinit_array)
-
-.init_array     0x00004e68        0x8
- *(SORT(.init_array.*))
- *(.init_array)
- .init_array    0x00004e68        0x4 C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
-                0x00004e68                __INIT_ARRAY__
- .init_array    0x00004e6c        0x4 C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtend_so.o
-
-.fini_array     0x00004e70        0xc
- *(.fini_array)
- .fini_array    0x00004e70        0x8 C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
-                0x00004e70                __FINI_ARRAY__
- .fini_array    0x00004e78        0x4 C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtend_so.o
- *(SORT(.fini_array.*))
-
-.ctors
- *crtbegin.o(.ctors)
- *crtbegin?.o(.ctors)
- *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
- *(SORT(.ctors.*))
- *(.ctors)
-
-.dtors
- *crtbegin.o(.dtors)
- *crtbegin?.o(.dtors)
- *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
- *(SORT(.dtors.*))
- *(.dtors)
-
-.jcr
- *(.jcr)
-
-.data.rel.ro
- *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
- *(.data.rel.ro* .gnu.linkonce.d.rel.ro.*)
-
-.dynamic        0x00004e7c       0xe0
- *(.dynamic)
- .dynamic       0x00004e7c       0xe0 C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
-                0x00004e7c                _DYNAMIC
-
-.got            0x00004f5c       0xa4
- *(.got.plt)
- .got.plt       0x00004f5c       0x38 C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
-                0x00004f5c                _GLOBAL_OFFSET_TABLE_
- *(.got)
- .got           0x00004f94       0x6c C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
-                0x00005000                . = (. DATA_SEGMENT_RELRO_END 0x0)
-
-.data           0x00005000       0x10
-                0x00005000                __data_start = .
- *(.data .data.* .gnu.linkonce.d.*)
- .data          0x00005000       0x10 C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
-                0x00005000                __dso_handle
-
-.data1
- *(.data1)
-                0x00005010                _edata = .
-                0x00005010                PROVIDE (edata, .)
-                0x00005010                __bss_start = .
-                0x00005010                __bss_start__ = .
-
-.bss            0x00005010       0x4c
- *(.dynbss)
- .dynbss        0x00000000        0x0 C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
- *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x00005010       0x4c release\bluetooth_platform.os
- *(COMMON)
-                0x0000505c                . = ALIGN ((. != 0x0)?0x4:0x1)
-                0x0000505c                _bss_end__ = .
-                0x0000505c                __bss_end__ = .
-                0x0000505c                . = ALIGN (0x4)
-                0x0000505c                . = ALIGN (0x4)
-                0x0000505c                __end__ = .
-                0x0000505c                _end = .
-                0x0000505c                PROVIDE (end, .)
-                0x0000505c                . = DATA_SEGMENT_END (.)
-
-.stab
- *(.stab)
-
-.stabstr
- *(.stabstr)
-
-.stab.excl
- *(.stab.excl)
-
-.stab.exclstr
- *(.stab.exclstr)
-
-.stab.index
- *(.stab.index)
-
-.stab.indexstr
- *(.stab.indexstr)
-
-.comment        0x00000000       0x6c
- *(.comment)
- .comment       0x00000000       0x12 release\bluetooth_platform.os
- .comment       0x00000012       0x12 release\bluetooth.os
- .comment       0x00000024       0x12 release\bluetooth_register.os
- .comment       0x00000036       0x12 C:\Marmalade\7.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
- .comment       0x00000048       0x12 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(unwind-arm.o)
- .comment       0x0000005a       0x12 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(pr-support.o)
-
-.debug
- *(.debug)
-
-.line
- *(.line)
-
-.debug_srcinfo
- *(.debug_srcinfo)
-
-.debug_sfnames
- *(.debug_sfnames)
-
-.debug_aranges  0x00000000       0x60
- *(.debug_aranges)
- .debug_aranges
-                0x00000000       0x20 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(unwind-arm.o)
- .debug_aranges
-                0x00000020       0x20 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(libunwind.o)
- .debug_aranges
-                0x00000040       0x20 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(pr-support.o)
-
-.debug_pubnames
-                0x00000000      0x22e
- *(.debug_pubnames)
- .debug_pubnames
-                0x00000000      0x177 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(unwind-arm.o)
- .debug_pubnames
-                0x00000177       0xb7 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(pr-support.o)
-
-.debug_info     0x00000000     0x1b53
- *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000     0x1424 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(unwind-arm.o)
- .debug_info    0x00001424       0xf9 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(libunwind.o)
- .debug_info    0x0000151d      0x636 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(pr-support.o)
-
-.debug_abbrev   0x00000000      0x5ef
- *(.debug_abbrev)
- .debug_abbrev  0x00000000      0x3bb c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(unwind-arm.o)
- .debug_abbrev  0x000003bb       0x14 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(libunwind.o)
- .debug_abbrev  0x000003cf      0x220 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(pr-support.o)
-
-.debug_line     0x00000000      0x795
- *(.debug_line)
- .debug_line    0x00000000      0x4d2 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(unwind-arm.o)
- .debug_line    0x000004d2       0xf1 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(libunwind.o)
- .debug_line    0x000005c3      0x1d2 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(pr-support.o)
-
-.debug_frame    0x00000000      0x350
- *(.debug_frame)
- .debug_frame   0x00000000      0x248 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(unwind-arm.o)
- .debug_frame   0x00000248      0x108 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(pr-support.o)
-
-.debug_str      0x00000000      0x9c7
- *(.debug_str)
- .debug_str     0x00000000      0x884 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(unwind-arm.o)
-                                0x8f4 (size before relaxing)
- .debug_str     0x00000884      0x143 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(pr-support.o)
-                                0x45a (size before relaxing)
-
-.debug_loc      0x00000000     0x12e8
- *(.debug_loc)
- .debug_loc     0x00000000      0xfef c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(unwind-arm.o)
- .debug_loc     0x00000fef      0x2f9 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(pr-support.o)
-
-.debug_macinfo
- *(.debug_macinfo)
-
-.debug_weaknames
- *(.debug_weaknames)
-
-.debug_funcnames
- *(.debug_funcnames)
-
-.debug_typenames
- *(.debug_typenames)
-
-.debug_varnames
- *(.debug_varnames)
-
-.debug_pubtypes
- *(.debug_pubtypes)
-
-.debug_ranges   0x00000000      0x228
- *(.debug_ranges)
- .debug_ranges  0x00000000      0x1f8 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(unwind-arm.o)
- .debug_ranges  0x000001f8       0x30 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(pr-support.o)
-
-.gnu.attributes
- *(.gnu.attributes)
-
-.note.gnu.arm.ident
- *(.note.gnu.arm.ident)
-
-/DISCARD/
- *(.note.GNU-stack)
- *(.gnu_debuglink)
-OUTPUT(C:\Marmalade\7.2\extensions\bluetooth\lib\android\libbluetooth.so elf32-littlearm)
-
-.ARM.attributes
-                0x00000000       0x31
- .ARM.attributes
-                0x00000000       0x2d C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtbegin_so.o
- .ARM.attributes
-                0x0000002d       0x2b release\bluetooth_platform.os
- .ARM.attributes
-                0x00000058       0x2b release\bluetooth.os
- .ARM.attributes
-                0x00000083       0x2b release\bluetooth_register.os
- .ARM.attributes
-                0x000000ae       0x2b C:\Marmalade\7.2\s3e\edk\lib\android\libedk.a(edk_helpers.o)
- .ARM.attributes
-                0x000000d9       0x29 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(unwind-arm.o)
- .ARM.attributes
-                0x00000102       0x19 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(libunwind.o)
- .ARM.attributes
-                0x0000011b       0x29 c:/android/android-ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/windows/bin/../lib/gcc/arm-linux-androideabi/4.4.3\libgcc.a(pr-support.o)
- .ARM.attributes
-                0x00000144       0x1f C:/android/android-ndk/platforms/android-9/arch-arm/usr/lib/crtend_so.o
+.bss            0x00003004       0x4c
+ .bss           0x00003004       0x4c release\bluetooth_platform.os

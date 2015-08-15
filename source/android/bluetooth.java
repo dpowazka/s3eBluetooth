@@ -103,6 +103,7 @@ class bluetooth
 				tmp = bluetooth_adapter.listenUsingRfcommWithServiceRecord("NAME", uuid);
 			} catch (IOException e) {
 				bluetooth_show_message("Bluetooth Error! listenUsingRfcommWithServiceRecord failed. Reason:" + e);
+				running = false;
 			}
 			mmServerSocket = tmp;
 		}
@@ -316,11 +317,15 @@ class bluetooth
 	private Server_Connect_Thread server_connect_thread = null;
 	private Client_Connect_Thread client_connect_thread = null;
 	private ArrayList<ByteBuffer> messages;
-	
+	private boolean was_bluetooth_enabled;
+
     public boolean init_bluetooth()
     {
 		messages = new ArrayList<ByteBuffer>();
 		bluetooth_adapter = BluetoothAdapter.getDefaultAdapter();
+		if(bluetooth_adapter != null) {
+			was_bluetooth_enabled = bluetooth_adapter.isEnabled();
+		}
         return bluetooth_adapter != null;
 		
     }
@@ -336,7 +341,7 @@ class bluetooth
 	
     public void disable_bluetooth()
     {
-        if (bluetooth_adapter != null && bluetooth_adapter.isEnabled()) {
+        if (bluetooth_adapter != null && bluetooth_adapter.isEnabled() && !was_bluetooth_enabled) {
 			bluetooth_adapter.disable();
 		}
     }
@@ -446,7 +451,11 @@ class bluetooth
     public void bluetooth_message_send_current()
     {
 		//System.out.println("SEND");
-		data_thread.write(bos);
+		if(data_thread != null) {
+			data_thread.write(bos);
+		} else {
+			System.out.println("bluetooth_message_send_current - data thread is null");
+		}
 		bos = null;
     }
 	
